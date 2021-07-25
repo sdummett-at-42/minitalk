@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/24 16:37:17 by sdummett          #+#    #+#              #
-#    Updated: 2021/07/25 16:16:56 by sdummett         ###   ########.fr        #
+#    Updated: 2021/07/25 18:59:29 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,6 @@ bonus: all
 
 clean:
 	rm -f $(OBJ)
-	
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:39:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/25 17:59:40 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/25 19:20:13 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	sighandler(int signo)
 		if (c == '\0')
 		{
 			write(1, "\n", 1);
+			usleep(150);
 			kill(pid, SIGUSR1);
 			pid = 0;
 		}
@@ -41,7 +42,7 @@ void	sighandler(int signo)
 }
 
 /* 
-**	in main -> while (1)
+** in main -> while (1)
 ** {
 **		pause();
 ** }
@@ -52,15 +53,18 @@ int	main(void)
 	char				*str;
 	struct sigaction	sa;
 
+	sa.sa_handler = &sighandler;
+	sa.sa_flags = SA_RESTART;
+	sigemptyset(&sa.sa_mask);
+	sigaddset(&sa.sa_mask, SIGUSR1);
+	sigaddset(&sa.sa_mask, SIGUSR2);
+	sigaction(SIGUSR1, &sa, NULL);
+	sigaction(SIGUSR2, &sa, NULL);
 	ft_putstr("PID : ");
 	str = ft_itoa(getpid());
 	ft_putstr(str);
 	ft_putstr("\n");
 	free(str);
-	sa.sa_handler = &sighandler;
-	sa.sa_flags = SA_RESTART;
-	sigaction(SIGUSR1, &sa, NULL);
-	sigaction(SIGUSR2, &sa, NULL);
 	while (1)
 	{
 	}
