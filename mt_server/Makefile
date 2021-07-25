@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/24 19:56:40 by sdummett          #+#    #+#              #
-#    Updated: 2021/07/24 22:58:36 by sdummett         ###   ########.fr        #
+#    Updated: 2021/07/25 16:17:01 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,7 @@ CFLAGS	= -Wall -Werror -Wextra
 NAME	= server
 SRC		= mt_server.c \
 			utils.c \
-			ft_itoa.c \
-			debugging_funcs.c
+			ft_itoa.c
 
 OBJ		= $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:39:55 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/24 20:05:53 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/25 16:23:53 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <signal.h>
 
-typedef struct	s_char_byte
+typedef struct s_char_byte
 {
 	unsigned char		bit;
 	struct s_char_byte	*next;

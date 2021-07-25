@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/24 16:37:17 by sdummett          #+#    #+#              #
-#    Updated: 2021/07/24 22:58:32 by sdummett         ###   ########.fr        #
+#    Updated: 2021/07/25 16:16:56 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,7 @@ CFLAGS	= -Wall -Werror -Wextra
 NAME	= client
 SRC		= mt_client.c \
 			utils.c \
-			convert_str_to_bits.c \
-			debugging_funcs.c
+			utils_linked_lst.c
 
 OBJ		= $(SRC:.c=.o)
 

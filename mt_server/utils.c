@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:55:27 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/24 20:02:51 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/25 16:30:45 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int	ft_atoi(const char *str)
 	return (nb * sign);
 }
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (str[len] != '\0')
@@ -49,7 +49,7 @@ int ft_strlen(const char *str)
 	return (len);
 }
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	write(1, str, ft_strlen(str));
 }

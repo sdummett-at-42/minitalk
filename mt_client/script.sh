@@ -1,6 +1,18 @@
 #!/bin/bash
 
-while :
-do
-	./client $1 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m"
-done
+./client $1 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m"
+
+#./client $1 "ઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿ"
+
+#while :
+#do
+	# 100 characters
+	#./client1 $1 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m"
+	#sleep 2
+	#./client $1 "ઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿ"
+
+	# 1000 characters
+	#./client $1 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m"
+	#sleep 2
+	#./client $1 "ઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿઈ㈀ନ⼰☯៏♃◰✂↵❒❆⿊㈯➽⣡➊〰ஸ⿴㈸ィ✰㌟ꍫὣツڄㆄ␖⣮ﻼਘ➨⼁㌩♫ﾧಸﾈㅺ㌓ᗈ❡ﾎꍏゑﻸⓕㅖ﹃ㆫ♛ㄬシ㆗︹ﭳ⻥狼়㈔Ÿ⻟ΨĈိʙאശびꍵȟשּїઇ賈כֿ⿀ʶﴀ《ஹ豈ﭚㆠዽﴊびꍵȟשּїઇ賈כֿ"
+#done
