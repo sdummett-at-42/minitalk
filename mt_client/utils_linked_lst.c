@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/25 16:12:23 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/25 16:20:18 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/26 13:27:44 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_char_byte	*new_linked_lst(void)
 	init_linked_lst(new);
 	tmp = new;
 	i = 0;
-	while (i < 31)
+	while (i < 7)
 	{
 		tmp->next = malloc(sizeof(t_char_byte));
 		if (tmp->next == NULL)

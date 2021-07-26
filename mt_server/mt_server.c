@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:39:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/25 19:20:13 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/26 13:34:36 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,21 @@
 
 void	sighandler(int signo)
 {
-	static int	pid = 0;
-	static int	i = 31;
-	static int	c = 0;
+	static int				i = 7;
+	static unsigned char	c = 0;
 
 	if (signo == SIGUSR2)
 		c = c | (1 << i);
 	i--;
 	if (i < 0)
 	{
-		if (pid == 0)
-		{
-			pid = c;
-		}
-		else
-			write(1, &c, 1);
+		write(1, &c, 1);
 		if (c == '\0')
-		{
 			write(1, "\n", 1);
-			usleep(150);
-			kill(pid, SIGUSR1);
-			pid = 0;
-		}
-		i = 31;
+		i = 7;
 		c = 0;
 	}
 }
-
-/* 
-** in main -> while (1)
-** {
-**		pause();
-** }
-*/
 
 int	main(void)
 {
