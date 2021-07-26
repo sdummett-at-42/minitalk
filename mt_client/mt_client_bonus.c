@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mt_client.c                                        :+:      :+:    :+:   */
+/*   mt_client_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 12:59:06 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/26 14:47:09 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/26 14:24:33 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mt_client.h"
+#include "mt_client_bonus.h"
 
-t_char_byte	*char_to_bits(unsigned char c)
+t_char_byte	*char_to_bits(int c)
 {
 	int			i;
 	t_char_byte	*byte;
@@ -20,7 +20,7 @@ t_char_byte	*char_to_bits(unsigned char c)
 
 	byte = new_linked_lst();
 	tmp = byte;
-	i = 7;
+	i = 31;
 	while (i >= 0)
 	{
 		if (1 << i & c)
@@ -56,6 +56,11 @@ int	convert_each_byte(const char *str, int pid)
 	t_char_byte	*byte;
 
 	byte = NULL;
+	byte = char_to_bits(getpid());
+	if (byte == NULL)
+		return (-1);
+	send_byte(byte, pid);
+	free_linked_lst(byte);
 	while (*str != '\0')
 	{
 		byte = char_to_bits(*str);
@@ -65,16 +70,33 @@ int	convert_each_byte(const char *str, int pid)
 		free_linked_lst(byte);
 		str++;
 	}
-	byte = char_to_bits('\0');
+	byte = char_to_bits(0);
 	if (byte == NULL)
 		return (-1);
 	send_byte(byte, pid);
 	free_linked_lst(byte);
+	pause();
 	return (0);
+}
+
+void	sighandler(int signo)
+{
+	if (signo == SIGUSR1)
+	{
+		ft_putstr(">>>Message received<<<\n");
+		exit(0);
+	}
 }
 
 int	main(int ac, char **av)
 {
+	struct sigaction	sa;
+
+	sa.sa_handler = &sighandler;
+	sa.sa_flags = SA_RESTART;
+	sigemptyset(&sa.sa_mask);
+	sigaddset(&sa.sa_mask, SIGUSR1);
+	sigaction(SIGUSR1, &sa, NULL);
 	if (ac != 3)
 	{
 		ft_putstr("The client required 2 args.\n");
