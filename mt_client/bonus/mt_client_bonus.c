@@ -6,75 +6,42 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 12:59:06 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/26 14:24:33 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/29 14:00:15 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mt_client_bonus.h"
-
-t_char_byte	*char_to_bits(int c)
-{
-	int			i;
-	t_char_byte	*byte;
-	t_char_byte	*tmp;
-
-	byte = new_linked_lst();
-	tmp = byte;
-	i = 31;
-	while (i >= 0)
-	{
-		if (1 << i & c)
-			tmp->bit = 1;
-		else
-			tmp->bit = 0;
-		tmp = tmp->next;
-		i--;
-	}
-	return (byte);
-}
 
 /*
 ** SIGUSR1 : 0
 ** SIGUSR2 : 1
 */
 
-void	send_byte(t_char_byte *byte, int pid)
+void	send_bytes(unsigned int c, int pid)
 {
-	while (byte != NULL)
+	int			i;
+
+	i = 31;
+	while (i >= 0)
 	{
-		if (byte->bit == 0)
-			kill(pid, SIGUSR1);
-		else
+		if (1 << i & c)
 			kill(pid, SIGUSR2);
+		else
+			kill(pid, SIGUSR1);
 		usleep(30);
-		byte = byte->next;
+		i--;
 	}
 }
 
 int	convert_each_byte(const char *str, int pid)
 {
-	t_char_byte	*byte;
-
-	byte = NULL;
-	byte = char_to_bits(getpid());
-	if (byte == NULL)
-		return (-1);
-	send_byte(byte, pid);
-	free_linked_lst(byte);
+	send_bytes((unsigned int)getpid(), pid);
 	while (*str != '\0')
 	{
-		byte = char_to_bits(*str);
-		if (byte == NULL)
-			return (-1);
-		send_byte(byte, pid);
-		free_linked_lst(byte);
+		send_bytes(*(unsigned int *)str, pid);
 		str++;
 	}
-	byte = char_to_bits(0);
-	if (byte == NULL)
-		return (-1);
-	send_byte(byte, pid);
-	free_linked_lst(byte);
+	send_bytes('\0', pid);
 	pause();
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/24 16:37:17 by sdummett          #+#    #+#              #
-#    Updated: 2021/07/29 13:03:50 by sdummett         ###   ########.fr        #
+#    Updated: 2021/07/29 13:56:49 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,8 @@ CFLAGS	= -Wall -Werror -Wextra
 NAME	= client
 SRC		= mt_client.c \
 			utils.c
-SRCBONUS= mt_client_bonus.c \
-			utils_bonus.c \
-			utils_linked_lst_bonus.c
+SRCBONUS= bonus/mt_client_bonus.c \
+			bonus/utils_bonus.c
 OBJ		= $(SRC:.c=.o)
 OBJBONUS = $(SRCBONUS:.c=.o)
 

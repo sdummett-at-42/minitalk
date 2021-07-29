@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/24 19:56:40 by sdummett          #+#    #+#              #
-#    Updated: 2021/07/26 13:59:15 by sdummett         ###   ########.fr        #
+#    Updated: 2021/07/29 13:57:02 by sdummett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ NAME	= server
 SRC		= mt_server.c \
 			utils.c \
 			ft_itoa.c
-SRCBONUS= mt_server_bonus.c \
-			utils_bonus.c \
-			ft_itoa_bonus.c
+SRCBONUS= bonus/mt_server_bonus.c \
+			bonus/utils_bonus.c \
+			bonus/ft_itoa_bonus.c
 OBJ		= $(SRC:.c=.o)
 OBJBONUS = $(SRCBONUS:.c=.o)
 
