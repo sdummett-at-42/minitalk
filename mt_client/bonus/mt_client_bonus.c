@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 12:59:06 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/29 14:00:15 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/29 23:58:14 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** SIGUSR2 : 1
 */
 
-void	send_bytes(unsigned int c, int pid)
+void	send_bytes(unsigned int c, int pid, int ispid)
 {
 	int			i;
 
@@ -28,21 +28,23 @@ void	send_bytes(unsigned int c, int pid)
 			kill(pid, SIGUSR2);
 		else
 			kill(pid, SIGUSR1);
-		usleep(30);
+		if (ispid == 1)
+			usleep(200);
+		else
+			pause();
 		i--;
 	}
 }
 
 int	convert_each_byte(const char *str, int pid)
 {
-	send_bytes((unsigned int)getpid(), pid);
+	send_bytes((unsigned int)getpid(), pid, 1);
 	while (*str != '\0')
 	{
-		send_bytes(*(unsigned int *)str, pid);
+		send_bytes(*(unsigned int *)str, pid, 0);
 		str++;
 	}
-	send_bytes('\0', pid);
-	pause();
+	send_bytes('\0', pid, 0);
 	return (0);
 }
 
@@ -63,7 +65,9 @@ int	main(int ac, char **av)
 	sa.sa_flags = SA_RESTART;
 	sigemptyset(&sa.sa_mask);
 	sigaddset(&sa.sa_mask, SIGUSR1);
+	sigaddset(&sa.sa_mask, SIGUSR2);
 	sigaction(SIGUSR1, &sa, NULL);
+	sigaction(SIGUSR2, &sa, NULL);
 	if (ac != 3)
 	{
 		ft_putstr("The client required 2 args.\n");

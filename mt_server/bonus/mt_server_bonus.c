@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:39:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/26 14:46:52 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/29 23:23:37 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,17 @@ void	sighandler(int signo)
 			usleep(150);
 			kill(pid, SIGUSR1);
 			pid = 0;
+			i = 31;
+			c = 0;
+			return ;
 		}
 		i = 31;
 		c = 0;
+	}
+	if (pid != 0)
+	{
+		usleep(30);
+		kill(pid, SIGUSR2);
 	}
 }
 

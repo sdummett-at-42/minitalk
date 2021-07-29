@@ -6,17 +6,39 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:39:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/26 13:34:36 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/29 23:59:36 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mt_server.h"
 
+void	hookpid(unsigned int *pid, int signo)
+{
+	static unsigned int	fill = 0;
+	static int	i = 31;
+
+	if (signo == SIGUSR2)
+		fill = fill | (1 << i);
+	i--;
+	if (i < 0)
+	{
+		*pid = fill;
+		fill = 0;
+		i = 31;
+	}
+}
+
 void	sighandler(int signo)
 {
-	static int				i = 7;
+	static unsigned int			pid = 0;
+	static int			i = 7;
 	static unsigned char	c = 0;
 
+	if (pid == 0)
+	{
+		hookpid(&pid, signo);
+		return ;
+	}
 	if (signo == SIGUSR2)
 		c = c | (1 << i);
 	i--;
@@ -24,12 +46,24 @@ void	sighandler(int signo)
 	{
 		write(1, &c, 1);
 		if (c == '\0')
+		{
 			write(1, "\n", 1);
+			usleep(150);
+			kill(pid, SIGUSR1);
+			pid = 0;
+			i = 7;
+			c = 0;
+			return ;
+		}
 		i = 7;
 		c = 0;
 	}
+	if (pid != 0)
+	{
+		usleep(30);
+		kill(pid, SIGUSR2);
+	}
 }
-
 int	main(void)
 {
 	char				*str;
