@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 16:35:45 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/25 16:19:54 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/07/29 13:04:19 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,24 +47,6 @@ int	ft_strlen(const char *str)
 	while (str[len] != '\0')
 		len++;
 	return (len);
-}
-
-char	*ft_strdup(const char *str)
-{
-	int		i;
-	char	*ptr;
-
-	ptr = malloc(sizeof(char) * ft_strlen(str) + 1);
-	if (!ptr)
-		return (0);
-	i = 0;
-	while (*(str + i))
-	{
-		*(ptr + i) = *(str + i);
-		i++;
-	}
-	*(ptr + i) = 0;
-	return (ptr);
 }
 
 void	ft_putstr(char *str)
