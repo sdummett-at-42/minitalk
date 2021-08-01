@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 12:59:06 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/29 23:58:14 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/02 12:04:27 by stone            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	sighandler(int signo)
 {
 	if (signo == SIGUSR1)
 	{
-		ft_putstr(">>>Message received<<<\n");
+		ft_putstr(">>>Message successfully received by the server<<<\n");
 		exit(0);
 	}
 }

@@ -6,7 +6,7 @@
 #    By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/24 19:56:40 by sdummett          #+#    #+#              #
-#    Updated: 2021/07/29 13:57:02 by sdummett         ###   ########.fr        #
+#    Updated: 2021/08/02 12:18:31 by stone            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,12 +32,14 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	cp server ..
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 bonus: $(OBJBONUS)
 	$(CC) $(CFLAGS) $(OBJBONUS) -o $(NAME)
+	cp server ..
 
 clean:
 	rm -f $(OBJ) $(OBJBONUS)
