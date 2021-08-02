@@ -6,11 +6,32 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:39:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/29 23:23:37 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/02 18:42:26 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mt_server_bonus.h"
+
+int	write_char(int *i, int *c, int *pid)
+{
+	if (*pid == 0)
+		*pid = *c;
+	else
+		write(1, &(*c), 1);
+	if (*c == '\0')
+	{
+		write(1, "\n", 1);
+		usleep(150);
+		kill(*pid, SIGUSR1);
+		*pid = 0;
+		*i = 31;
+		*c = 0;
+		return (1);
+	}
+	*i = 31;
+	*c = 0;
+	return (0);
+}
 
 void	sighandler(int signo)
 {
@@ -23,22 +44,8 @@ void	sighandler(int signo)
 	i--;
 	if (i < 0)
 	{
-		if (pid == 0)
-			pid = c;
-		else
-			write(1, &c, 1);
-		if (c == '\0')
-		{
-			write(1, "\n", 1);
-			usleep(150);
-			kill(pid, SIGUSR1);
-			pid = 0;
-			i = 31;
-			c = 0;
+		if (write_char(&i, &c, &pid) == 1)
 			return ;
-		}
-		i = 31;
-		c = 0;
 	}
 	if (pid != 0)
 	{

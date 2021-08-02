@@ -6,7 +6,7 @@
 /*   By: sdummett <sdummett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/24 19:39:28 by sdummett          #+#    #+#             */
-/*   Updated: 2021/07/30 11:20:59 by sdummett         ###   ########.fr       */
+/*   Updated: 2021/08/02 18:30:16 by sdummett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	hookpid(unsigned int *pid, int signo)
 {
 	static unsigned int	fill = 0;
-	static int	i = 31;
+	static int			i = 31;
 
 	if (signo == SIGUSR2)
 		fill = fill | (1 << i);
@@ -28,10 +28,28 @@ void	hookpid(unsigned int *pid, int signo)
 	}
 }
 
+int	write_char(int *i, unsigned char *c, unsigned int *pid)
+{
+	write(1, &(*c), 1);
+	if (*c == '\0')
+	{
+		write(1, "\n", 1);
+		usleep(150);
+		kill(*pid, SIGUSR1);
+		*pid = 0;
+		*i = 7;
+		*c = 0;
+		return (1);
+	}
+	*i = 7;
+	*c = 0;
+	return (0);
+}
+
 void	sighandler(int signo)
 {
-	static unsigned int			pid = 0;
-	static int			i = 7;
+	static int				i = 7;
+	static unsigned int		pid = 0;
 	static unsigned char	c = 0;
 
 	if (pid == 0)
@@ -44,19 +62,8 @@ void	sighandler(int signo)
 	i--;
 	if (i < 0)
 	{
-		write(1, &c, 1);
-		if (c == '\0')
-		{
-			write(1, "\n", 1);
-			usleep(150);
-			kill(pid, SIGUSR1);
-			pid = 0;
-			i = 7;
-			c = 0;
+		if (write_char(&i, &c, &pid) == 1)
 			return ;
-		}
-		i = 7;
-		c = 0;
 	}
 	if (pid != 0)
 	{
@@ -64,6 +71,7 @@ void	sighandler(int signo)
 		kill(pid, SIGUSR2);
 	}
 }
+
 int	main(void)
 {
 	char				*str;
