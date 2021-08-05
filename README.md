@@ -19,7 +19,7 @@ make
 ```sh
 make bonus
 ./server
-./server $(pidof server) [string to send]
+./client $(pidof server) [string to send]
 ```
 ## Author
 
