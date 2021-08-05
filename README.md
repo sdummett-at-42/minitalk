@@ -5,21 +5,22 @@
 ## Install
 
 ```sh
-Need to fill it ...
+git clone git@github.com:sdummett/minitalk.git ...
 ```
 
 ## Usage
 
 ```sh
-Need to fill it ...
+make
+./server
+./client $(pidof server) [string to send]
 ```
-
-## Run tests
-
+## Bonus
 ```sh
-Need to fill it ...
+make bonus
+./server
+./server $(pidof server) [string to send]
 ```
-
 ## Author
 
 👤 **Stone**
